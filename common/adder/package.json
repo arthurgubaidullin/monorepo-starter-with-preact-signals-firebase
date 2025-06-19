@@ -4,7 +4,6 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {
-    "@common/typescript-configs": "*",
     "typescript": "^5.8.3",
     "vitest": "^3.2.0"
   },
