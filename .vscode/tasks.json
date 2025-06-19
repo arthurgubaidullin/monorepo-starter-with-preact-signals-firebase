@@ -14,7 +14,7 @@
       "icon": { "id": "sparkle" },
       "presentation": {
         "echo": true,
-        "reveal": "always",
+        "reveal": "silent",
         "focus": false,
         "panel": "dedicated",
         "showReuseMessage": true,
