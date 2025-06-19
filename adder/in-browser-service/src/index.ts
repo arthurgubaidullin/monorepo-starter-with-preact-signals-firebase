@@ -8,6 +8,8 @@ import { type AddRequest, type AddResponse } from "@adder/http-interfaces";
 
 export class Adder {
   #add: HttpsCallable<AddRequest, AddResponse, unknown>;
+  #a: number | null = null;
+  #b: number | null = null;
   #result: Signal<number | null> = signal(null);
 
   constructor(functions: Functions) {
@@ -19,12 +21,20 @@ export class Adder {
   }
 
   async add(this: this, a: number, b: number): Promise<void> {
+    const delay = Math.round(Math.random() * 10000);
+
+    this.#a = a;
+    this.#b = b;
     this.#result.value = null;
 
     try {
       const response = await this.#add({ a, b });
 
-      this.#result.value = response.data.result;
+      await new Promise((r) => setTimeout(r, delay));
+
+      if (this.#a === a && this.#b === b) {
+        this.#result.value = response.data.result;
+      }
     } catch (error) {
       console.error(error);
     }
