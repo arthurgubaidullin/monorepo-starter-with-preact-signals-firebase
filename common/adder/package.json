@@ -1,0 +1,17 @@
+{
+  "name": "@common/adder",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@common/tsconfigs": "*",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.0"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist node_modules/.tmp/build.tsbuildinfo",
+    "build": "tsc -p tsconfig-build.json",
+    "test": "vitest . --run"
+  },
+  "private": true
+}
