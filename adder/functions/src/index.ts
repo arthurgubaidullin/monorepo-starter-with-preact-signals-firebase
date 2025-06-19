@@ -1,15 +1,11 @@
-import { logger } from "firebase-functions";
-import { onRequest } from "firebase-functions/v2/https";
 import * as Adder from "@adder/business-rules";
+import { type AddRequest, type AddResponse } from "@adder/http-interfaces";
+import { onCall, type CallableRequest } from "firebase-functions/v2/https";
 
-const add = onRequest((request, response) => {
-  const a = 2;
-  const b = 2;
-  const result = Adder.add(a, b);
+const add = onCall((req: CallableRequest<AddRequest>): AddResponse => {
+  const result = Adder.add(req.data.a, req.data.b);
 
-  logger.debug("Хочешь пирожок?", { a, b, result });
-
-  response.json({ a, b, result: result }).end();
+  return { result: result };
 });
 
 export const adder = { add };
