@@ -7,14 +7,18 @@
   ],
   "scripts": {
     "build-test-lint": "turbo build test lint",
-    "emulators:start": "npm run build-test-lint && firebase emulators:start --project demo-monorepo"
+    "emulators:start": "npm run build-test-lint && firebase emulators:start --project demo-monorepo",
+    "knip": "knip"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
+    "@types/node": "^24.0.3",
     "eslint": "^9.29.0",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.2.0",
+    "knip": "^5.61.2",
     "turbo": "^2.5.4",
+    "typescript": "^5.8.3",
     "typescript-eslint": "^8.34.1"
   },
   "author": {
