@@ -47,13 +47,13 @@ export function App() {
       <p>
         Check out{" "}
         <a
-          href="https://preactjs.com/guide/v10/getting-started#create-a-vite-powered-preact-app"
+          href="https://github.com/arthurgubaidullin/monorepo-starter-with-preact-signals-firebase"
           target="_blank"
           rel="noreferrer"
         >
-          create-preact
+          monorepo-starter-with-preact-signals-firebase
         </a>
-        , the official Preact + Vite starter
+        , the Monorepo Starter with Preact Signals Firebase
       </p>
       <p className="read-the-docs">
         Click on the Vite and Preact logos to learn more
