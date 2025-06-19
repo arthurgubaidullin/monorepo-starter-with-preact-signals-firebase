@@ -1,10 +1,18 @@
-import { useState } from "preact/hooks";
+import { adder } from "@factory/in-browser";
+import { useSignal, useSignalEffect } from "@preact/signals";
+import "./app.css";
 import preactLogo from "./assets/preact.svg";
 import viteLogo from "/vite.svg";
-import "./app.css";
 
 export function App() {
-  const [count, setCount] = useState(0);
+  const a = useSignal(0);
+  const b = useSignal(0);
+
+  const result = adder().result;
+
+  useSignalEffect(() => {
+    adder().add(a.value, b.value);
+  });
 
   return (
     <>
@@ -18,9 +26,16 @@ export function App() {
       </div>
       <h1>Vite + Preact</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <button onClick={() => (a.value = a.peek() + 1)}>{a.value}</button>
+
+        <span> + </span>
+
+        <button onClick={() => (b.value = b.peek() + 1)}>{b.value}</button>
+
+        <span> = </span>
+
+        <span>{result !== null ? result : "🤷"}</span>
+
         <p>
           Edit <code>src/app.tsx</code> and save to test HMR
         </p>
