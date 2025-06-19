@@ -24,7 +24,7 @@ export function App() {
           <img src={preactLogo} className="logo preact" alt="Preact logo" />
         </a>
       </div>
-      <h1>Vite + Preact</h1>
+      <h1>Vite + Preact + Signals + Firebase</h1>
       <div className="card">
         <button onClick={() => (a.value = a.peek() + 1)}>{a.value}</button>
 
