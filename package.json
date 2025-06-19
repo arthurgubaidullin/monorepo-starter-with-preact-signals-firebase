@@ -3,6 +3,9 @@
   "type": "module",
   "workspaces": [],
   "scripts": {},
+  "devDependencies": {
+    "turbo": "^2.5.4"
+  },
   "author": {
     "url": "https://github.com/arthurgubaidullin",
     "name": "Artur Gubaidullin"
