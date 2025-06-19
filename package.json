@@ -3,6 +3,7 @@
   "type": "module",
   "workspaces": [
     "adder/*",
+    "factory/*",
     "web-app"
   ],
   "scripts": {
