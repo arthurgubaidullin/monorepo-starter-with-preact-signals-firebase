@@ -1,6 +1,13 @@
 import { Adder } from "@adder/in-browser-service";
 import { Factory } from "./factory";
 
-const factory = new Factory();
+let factory: Factory | null = null;
 
-export const adder = (): Adder => factory.adder;
+const get = (): Factory => {
+  if (!factory) {
+    factory = new Factory();
+  }
+  return factory;
+};
+
+export const adder = (): Adder => get().adder;
