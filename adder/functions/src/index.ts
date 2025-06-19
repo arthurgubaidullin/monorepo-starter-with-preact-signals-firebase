@@ -1,12 +1,13 @@
 import { logger } from "firebase-functions";
 import { onRequest } from "firebase-functions/v2/https";
-import { add } from "@adder/business-rules";
+import * as Adder from "@adder/business-rules";
 
-export const helloWorld = onRequest((request, response) => {
+export const add = onRequest((request, response) => {
   const a = 2;
   const b = 2;
+  const result = Adder.add(a, b);
 
-  logger.debug("Хочешь пирожок?", { a, b, result: add(a, b) });
+  logger.debug("Хочешь пирожок?", { a, b, result });
 
-  response.send("Hello from Firebase Function!").end();
+  response.json({ a, b, result: result }).end();
 });
