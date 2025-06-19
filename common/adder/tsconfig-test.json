@@ -6,6 +6,6 @@
     "noEmit": true,
     "rootDir": "src"
   },
-  "include": ["src"],
+  "include": ["src", "vitest.config.ts"],
   "exclude": []
 }
