@@ -12,7 +12,7 @@
   "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "sh ./.devcontainer/install-tools.sh",
+  "postCreateCommand": "sh ./.devcontainer/install-tools.sh && npm install",
   // "postCreateCommand": "npm install",
 
   // Configure tool-specific properties.
@@ -29,6 +29,11 @@
         "bradlc.vscode-tailwindcss"
       ]
     }
+  },
+
+  "remoteEnv": {
+    "DO_NOT_TRACK": "1",
+    "TURBO_TELEMETRY_DISABLED": "1"
   }
 
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
