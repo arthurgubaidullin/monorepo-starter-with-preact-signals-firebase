@@ -4,13 +4,13 @@
     {
       "type": "shell",
       "command": "turbo",
-      "args": ["build"],
+      "args": ["build", "test"],
       "group": {
         "kind": "build",
         "isDefault": true
       },
       "problemMatcher": [],
-      "label": "turbo: build",
+      "label": "turbo: build test",
       "icon": { "id": "sparkle" },
       "presentation": {
         "echo": true,
