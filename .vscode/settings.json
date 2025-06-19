@@ -1,5 +1,11 @@
 {
-  "cSpell.words": ["eventarc", "firestore", "Gubaidullin", "predeploy"],
+  "cSpell.words": [
+    "eventarc",
+    "firestore",
+    "Gubaidullin",
+    "predeploy",
+    "vitest"
+  ],
   "cSpell.language": "en,ru",
   "files.exclude": {
     "**/.turbo": true
