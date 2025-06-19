@@ -4,9 +4,10 @@ import {
   type Functions,
   type HttpsCallable,
 } from "firebase/functions";
+import { type AddRequest, type AddResponse } from "@adder/http-interfaces";
 
 export class Adder {
-  #add: HttpsCallable<{ a: number; b: number }, { result: number }, unknown>;
+  #add: HttpsCallable<AddRequest, AddResponse, unknown>;
   #result: Signal<number | null> = signal(null);
 
   constructor(functions: Functions) {
