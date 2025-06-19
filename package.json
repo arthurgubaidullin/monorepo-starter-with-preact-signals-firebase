@@ -2,7 +2,7 @@
   "name": "@monorepo/workspaces",
   "type": "module",
   "workspaces": [
-    "adder/*",
+    "adder/**/*",
     "factory/*",
     "web-app"
   ],
