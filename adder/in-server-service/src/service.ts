@@ -5,8 +5,8 @@ import type { Info } from "./logger";
 export class Adder {
   #logger: Info;
 
-  constructor(logger: Info) {
-    this.#logger = logger;
+  constructor(factory: { logger: Info }) {
+    this.#logger = factory.logger;
   }
 
   add(this: this, data: AddRequest): AddResponse {
