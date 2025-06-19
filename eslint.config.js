@@ -21,19 +21,6 @@ export default defineConfig([
     rules: {
       "@typescript-eslint/method-signature-style": "error",
       "react/react-in-jsx-scope": "off",
-      "no-restricted-imports": [
-        "warn",
-        {
-          patterns: [
-            {
-              regex: "^\\.\\./.+$",
-            },
-            {
-              regex: "^\\./.+/.+$",
-            },
-          ],
-        },
-      ],
     },
   },
   {
