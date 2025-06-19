@@ -1,0 +1,24 @@
+{
+  "name": "@adder/functions",
+  "type": "module",
+  "scripts": {
+    "prebuild": "rm -rf dist node_modules/.tmp/check.tsbuildinfo",
+    "build": "tsc -p tsconfig-check.json && vite build",
+    "test": "vitest . --run",
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "dist/index.js",
+  "dependencies": {
+    "firebase-admin": "^13.4.0",
+    "firebase-functions": "^6.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "firebase-functions-test": "^3.4.1",
+    "vite": "^6.3.5"
+  },
+  "private": true
+}
