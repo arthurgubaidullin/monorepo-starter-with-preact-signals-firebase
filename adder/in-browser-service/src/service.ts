@@ -7,13 +7,13 @@ import {
 import { type AddRequest, type AddResponse } from "@adder/http-interfaces";
 
 export class Adder {
-  #add: HttpsCallable<AddRequest, AddResponse, unknown>;
+  #addFn: HttpsCallable<AddRequest, AddResponse, unknown>;
   #a: number | null = null;
   #b: number | null = null;
   #result: Signal<number | null> = signal(null);
 
   constructor(factory: { functions: Functions }) {
-    this.#add = httpsCallable(factory.functions, "adder-add");
+    this.#addFn = httpsCallable(factory.functions, "adder-add");
   }
 
   get result(): number | null {
@@ -28,7 +28,7 @@ export class Adder {
     this.#result.value = null;
 
     try {
-      const response = await this.#add({ a, b });
+      const response = await this.#addFn({ a, b });
 
       await new Promise((r) => setTimeout(r, delay));
 
