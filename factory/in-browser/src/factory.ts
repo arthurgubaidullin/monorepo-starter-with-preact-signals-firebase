@@ -1,17 +1,18 @@
-import { getApp, type FirebaseApp } from "firebase/app";
 import { Adder } from "@adder/in-browser-service";
-import { getFunctions } from "firebase/functions";
+import { getFunctions, type Functions } from "firebase/functions";
 
 export class Factory {
-  #app: FirebaseApp;
-  #adder: Adder;
+  #adder: Adder | null = null;
 
-  constructor() {
-    this.#app = getApp();
-    this.#adder = new Adder(getFunctions(this.#app));
+  get functions(): Functions {
+    return getFunctions();
   }
 
   get adder(): Adder {
+    if (!this.#adder) {
+      this.#adder = new Adder(this);
+    }
+
     return this.#adder;
   }
 }

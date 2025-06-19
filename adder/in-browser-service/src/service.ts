@@ -12,8 +12,8 @@ export class Adder {
   #b: number | null = null;
   #result: Signal<number | null> = signal(null);
 
-  constructor(functions: Functions) {
-    this.#add = httpsCallable(functions, "adder-add");
+  constructor(factory: { functions: Functions }) {
+    this.#add = httpsCallable(factory.functions, "adder-add");
   }
 
   get result(): number | null {
