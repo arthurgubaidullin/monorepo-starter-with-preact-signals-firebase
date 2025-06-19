@@ -11,3 +11,8 @@ updates:
     schedule:
       interval: quarterly
     open-pull-requests-limit: 3
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: quarterly
+    open-pull-requests-limit: 3
