@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig-base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.tmp/test.tsbuildinfo",
+    "types": ["vitest/globals"],
+    "noEmit": true,
+    "rootDir": "src",
+    "isolatedDeclarations": false
+  },
+  "include": ["src", "vitest.config.ts"],
+  "exclude": []
+}
