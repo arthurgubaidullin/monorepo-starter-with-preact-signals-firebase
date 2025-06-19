@@ -8,6 +8,8 @@
     "preview": "vite preview --host"
   },
   "dependencies": {
+    "@factory/in-browser": "*",
+    "firebase": "^11.9.1",
     "preact": "^10.26.5",
     "@preact/signals": "^2.2.0"
   },
