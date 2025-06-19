@@ -9,9 +9,11 @@
   height: 6em;
   padding: 1.5em;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.preact:hover {
   filter: drop-shadow(0 0 2em #673ab8aa);
 }
@@ -22,4 +24,23 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.rotating {
+  display: inline-block;
+  /* Чтобы элемент можно было вращать */
+  animation: rotate 4s linear infinite;
+  /* Задаем анимацию */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    /* Начальная позиция */
+  }
+
+  to {
+    transform: rotate(360deg);
+    /* Конечная позиция */
+  }
 }

@@ -34,7 +34,11 @@ export function App() {
 
         <span> = </span>
 
-        <span>{result !== null ? result : "🤷"}</span>
+        {result !== null ? (
+          <span> {result}</span>
+        ) : (
+          <span className="rotating">🤷</span>
+        )}
 
         <p>
           Edit <code>src/app.tsx</code> and save to test HMR
