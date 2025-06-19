@@ -12,6 +12,7 @@
   "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "sh ./.devcontainer/install-tools.sh",
   // "postCreateCommand": "npm install",
 
   // Configure tool-specific properties.
