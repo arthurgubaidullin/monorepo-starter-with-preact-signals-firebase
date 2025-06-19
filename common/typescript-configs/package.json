@@ -1,5 +1,5 @@
 {
-  "name": "@common/tsconfigs",
+  "name": "@common/typescript-configs",
   "type": "module",
   "devDependencies": {
     "typescript": "^5.8.3"
