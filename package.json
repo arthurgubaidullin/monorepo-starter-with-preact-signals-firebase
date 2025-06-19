@@ -6,7 +6,10 @@
     "adder/*",
     "web-app"
   ],
-  "scripts": {},
+  "scripts": {
+    "build-test-lint": "turbo build test lint",
+    "emulators:start": "npm run build-test-lint && firebase emulators:start --project demo-monorepo"
+  },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
     "eslint": "^9.29.0",
