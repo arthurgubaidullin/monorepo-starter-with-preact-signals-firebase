@@ -1,4 +1,7 @@
 {
   "cSpell.words": ["Gubaidullin"],
-  "cSpell.language": "en,ru"
+  "cSpell.language": "en,ru",
+  "files.exclude": {
+    "**/.turbo": true
+  }
 }
