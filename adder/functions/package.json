@@ -12,7 +12,7 @@
   },
   "main": "dist/index.js",
   "dependencies": {
-    "@adder/business-rules": "*",
+    "@factory/in-server": "*",
     "firebase-admin": "^13.4.0",
     "firebase-functions": "^6.3.2",
     "@adder/http-interfaces": "*"
