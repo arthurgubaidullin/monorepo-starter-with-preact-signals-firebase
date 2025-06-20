@@ -7,7 +7,7 @@ export default defineConfig({
       entry: resolve("./src/index.ts"),
       name: "functions",
       fileName: "index",
-      formats: ["es"],
+      formats: ["cjs"],
     },
     rollupOptions: {
       external: [

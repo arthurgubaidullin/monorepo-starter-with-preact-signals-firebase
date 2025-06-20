@@ -10,7 +10,7 @@
   "engines": {
     "node": "22"
   },
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "dependencies": {
     "@factory/in-server": "*",
     "firebase-admin": "^13.4.0",
