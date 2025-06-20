@@ -9,7 +9,8 @@
   "scripts": {
     "build-test-lint": "turbo build test lint",
     "preview": "npm run build-test-lint && firebase emulators:start --project demo-monorepo",
-    "knip": "knip"
+    "knip": "knip",
+    "deploy": "firebase deploy"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
