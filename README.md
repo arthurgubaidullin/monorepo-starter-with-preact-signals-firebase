@@ -4,13 +4,13 @@
 
 ## About
 
-A modern starter template for monorepos with [Preact Signals](https://preactjs.com/), [Firebase Functions](https://firebase.google.com/docs/functions), blazing fast builds, and trunk-based development support.
+A modern starter template for monorepos with [Preact](https://preactjs.com), [Preact Signals](https://preactjs.com/guide/v10/signals/), [Firebase Functions](https://firebase.google.com/docs/functions), blazing fast builds, and trunk-based development support.
 
 ## Features
 
 - ⚡ **Blazing fast build** with [Turborepo](https://turbo.build/)
-- 🛠 **Instant development setup**: Dev Containers support
-- 🚀 **Front-end & Functions examples**: ready-to-use Vite + Preact Signals app and Firebase Functions
+- 🛠 **Instant development setup**: [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) support
+- 🚀 **Front-end & Functions examples**: ready-to-use Vite + Preact + Preact Signals app and Firebase Functions
 - 🌳 **Bounded contexts architecture** for large-scale projects
 - 🏷 **Full TypeScript coverage** from backend to frontend
 - 🔬 **Vitest** for built-in unit testing
@@ -102,7 +102,7 @@ Or use VS Code default build task.
   ```sh
   npm run deploy
   ```
-  _(make sure to configure environment variables and run `firebase login` beforehand)_
+  _(make sure to run `firebase login` beforehand)_
 
 ## Package Changes
 
