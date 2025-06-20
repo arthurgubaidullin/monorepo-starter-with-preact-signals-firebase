@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build-test-lint": "turbo build test lint",
-    "emulators:start": "npm run build-test-lint && firebase emulators:start --project demo-monorepo",
+    "preview": "npm run build-test-lint && firebase emulators:start --project demo-monorepo",
     "knip": "knip"
   },
   "devDependencies": {
