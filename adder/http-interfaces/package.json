@@ -3,6 +3,10 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "io-ts": "^2.2.22",
+    "fp-ts": "^2.16.10"
+  },
   "devDependencies": {
     "typescript": "^5.8.3",
     "vitest": "^3.2.0"

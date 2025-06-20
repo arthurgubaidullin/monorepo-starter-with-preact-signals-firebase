@@ -11,7 +11,9 @@
     "@factory/in-browser": "*",
     "firebase": "^11.9.1",
     "preact": "^10.26.5",
-    "@preact/signals": "^2.2.0"
+    "@preact/signals": "^2.2.0",
+    "io-ts": "^2.2.22",
+    "fp-ts": "^2.16.10"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.1",

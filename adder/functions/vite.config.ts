@@ -10,7 +10,12 @@ export default defineConfig({
       formats: ["es"],
     },
     rollupOptions: {
-      external: [/firebase-functions(\/.*)*/, /firebase-admin(\/.*)*/],
+      external: [
+        /firebase-functions(\/.*)*/,
+        /firebase-admin(\/.*)*/,
+        /io-ts(\/.*)*/,
+        /fp-ts(\/.*)*/,
+      ],
     },
     outDir: "dist",
   },

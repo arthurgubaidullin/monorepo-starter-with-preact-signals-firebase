@@ -15,7 +15,9 @@
     "@factory/in-server": "*",
     "firebase-admin": "^13.4.0",
     "firebase-functions": "^6.3.2",
-    "@adder/http-interfaces": "*"
+    "@adder/http-interfaces": "*",
+    "io-ts": "^2.2.22",
+    "fp-ts": "^2.16.10"
   },
   "devDependencies": {
     "typescript": "^5.8.3",
