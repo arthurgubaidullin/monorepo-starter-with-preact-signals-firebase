@@ -21,6 +21,12 @@ export default defineConfig([
     rules: {
       "@typescript-eslint/method-signature-style": "error",
       "react/react-in-jsx-scope": "off",
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: ["io-ts/lib/*", "fp-ts/lib/*"],
+        },
+      ],
     },
   },
   {
