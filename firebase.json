@@ -16,7 +16,7 @@
         "firebase-debug.*.log",
         "*.local"
       ],
-      "predeploy": ["npx turbo build --filter @adder/functions"]
+      "predeploy": ["npx turbo build test lint"]
     }
   ],
   "hosting": {
@@ -27,7 +27,8 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "predeploy": ["npx turbo build test lint"]
   },
   "emulators": {
     "auth": {
