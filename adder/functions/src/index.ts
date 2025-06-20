@@ -1,11 +1,24 @@
-import { type AddRequest, type AddResponse } from "@adder/http-interfaces";
+import { decodeAddRequest, type AddResponse } from "@adder/http-interfaces";
 import * as Factory from "@factory/in-server";
-import { onCall, type CallableRequest } from "firebase-functions/v2/https";
+import {
+  HttpsError,
+  onCall,
+  type CallableRequest,
+} from "firebase-functions/v2/https";
+import * as E from "fp-ts/Either";
+import { identity, pipe } from "fp-ts/function";
 
-const add = onCall((req: CallableRequest<AddRequest>): AddResponse => {
+const add = onCall((req: CallableRequest<unknown>): AddResponse => {
   const adder = Factory.adder();
 
-  return adder.add(req.data);
+  const data = pipe(
+    decodeAddRequest(req.data),
+    E.fold((error) => {
+      throw new HttpsError("failed-precondition", error.message);
+    }, identity)
+  );
+
+  return adder.add(data);
 });
 
 export const adder = { add };

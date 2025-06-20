@@ -1,13 +1,15 @@
+import { decodeAddResponse, type AddRequest } from "@adder/http-interfaces";
 import { signal, type Signal } from "@preact/signals";
 import {
   httpsCallable,
   type Functions,
   type HttpsCallable,
 } from "firebase/functions";
-import { type AddRequest, type AddResponse } from "@adder/http-interfaces";
+import * as E from "fp-ts/Either";
+import { identity, pipe } from "fp-ts/function";
 
 export class Adder {
-  #addFn: HttpsCallable<AddRequest, AddResponse, unknown>;
+  #addFn: HttpsCallable<AddRequest, unknown, unknown>;
   #a: number | null = null;
   #b: number | null = null;
   #result: Signal<number | null> = signal(null);
@@ -32,8 +34,16 @@ export class Adder {
 
       await new Promise((r) => setTimeout(r, delay));
 
+      const data = pipe(
+        response.data,
+        decodeAddResponse,
+        E.fold((error) => {
+          throw error;
+        }, identity)
+      );
+
       if (this.#a === a && this.#b === b) {
-        this.#result.value = response.data.result;
+        this.#result.value = data.result;
       }
     } catch (error) {
       console.error(error);
