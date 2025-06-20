@@ -2,8 +2,6 @@
 
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/arthurgubaidullin/monorepo-starter-with-preact-signals-firebase)
 
-## About
-
 A modern starter template for monorepos with [Preact](https://preactjs.com), [Preact Signals](https://preactjs.com/guide/v10/signals/), [Firebase Functions](https://firebase.google.com/docs/functions), blazing fast builds, and trunk-based development support.
 
 ## Features
